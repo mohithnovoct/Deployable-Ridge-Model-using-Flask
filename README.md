@@ -118,26 +118,3 @@ View prediction result
 
 _______________________________________________________________________________
 
-🏗️ Deployment Architecture  
-
-┌─────────────────┐<br>
-│   User Browser  │<br>
-└────────┬────────┘
-         │ HTTP Request
-         ▼
-┌─────────────────┐
-│  Flask Server   │
-│  (Port 8080)    │
-└────────┬────────┘
-         │
-         ├──► Load Model (ridge_model.pkl)
-         │
-         ├──► Load Scaler (standard_scaler.pkl)
-         │
-         ├──► Extract Form Data
-         │
-         ├──► Transform Input (StandardScaler)
-         │
-         ├──► Predict (Ridge Model)
-         │
-         └──► Render Result (home.html)
